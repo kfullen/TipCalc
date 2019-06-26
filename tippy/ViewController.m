@@ -24,6 +24,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.tipControl.selectedSegmentIndex = [defaults integerForKey:@"default_tip_percentage"];
+
+}
 - (IBAction)tapOut:(id)sender {
     [self.view endEditing:(YES)];
 }

@@ -89,7 +89,15 @@
                             <outletCollection property="gestureRecognizers" destination="fRu-BR-1HS" appends="YES" id="0nn-Id-ELe"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calc" id="JnK-s2-kpS"/>
+                    <navigationItem key="navigationItem" title="Tip Calc" id="JnK-s2-kpS">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="p4y-JU-0gg">
+                            <connections>
+                                <segue destination="HkM-nI-hi1" kind="popoverPresentation" popoverAnchorBarButtonItem="p4y-JU-0gg" id="wnq-Xe-rZt">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="rqJ-BG-Mkh" id="xYG-6F-QJR"/>
                         <outlet property="tipControl" destination="1gE-Pq-n3C" id="3BV-YK-dRJ"/>
@@ -105,6 +113,55 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="jVG-MF-Evc">
+            <objects>
+                <viewController title="Settings" id="2o8-07-YeF" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kfx-zM-vP9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-IW-eda">
+                                <rect key="frame" x="85" y="323" width="244" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeDefaultTip:" destination="2o8-07-YeF" eventType="touchUpInside" id="Qoo-1N-TeP"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNk-yL-Ecp">
+                                <rect key="frame" x="146" y="230" width="122" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RGs-Lk-Zdc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="F2V-3f-10R">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="GnK-W4-Buv">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorBarButtonItem="GnK-W4-Buv" id="tcf-kK-ZfF">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="defaultTipControl" destination="CZg-IW-eda" id="TqC-dw-eNN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGV-qr-Yoa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2797.1014492753625" y="133.92857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tAk-wU-iWe">
@@ -124,5 +181,27 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="49e-Zq-3Op">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HkM-nI-hi1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GbC-iQ-u0r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2o8-07-YeF" kind="relationship" relationship="rootViewController" id="Rnk-KL-G9Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRu-wg-mfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886.9565217391305" y="133.92857142857142"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wnq-Xe-rZt"/>
+        <segue reference="tcf-kK-ZfF"/>
+    </inferredMetricsTieBreakers>
 </document>

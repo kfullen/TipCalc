@@ -15,7 +15,7 @@
 		8429EE4822C2C66C0099EDA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8429EE4722C2C66C0099EDA1 /* main.m */; };
 		8429EE5222C2C66C0099EDA1 /* tippyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8429EE5122C2C66C0099EDA1 /* tippyTests.m */; };
 		8429EE5D22C2C66C0099EDA1 /* tippyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8429EE5C22C2C66C0099EDA1 /* tippyUITests.m */; };
-		8429EE6C22C2EDD90099EDA1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8429EE6B22C2EDD90099EDA1 /* SettingsViewController.m */; };
+		849EEA1322C34E210096CBEA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849EEA1222C34E210096CBEA /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		8429EE5822C2C66C0099EDA1 /* tippyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tippyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8429EE5C22C2C66C0099EDA1 /* tippyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tippyUITests.m; sourceTree = "<group>"; };
 		8429EE5E22C2C66C0099EDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8429EE6A22C2EDD90099EDA1 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		8429EE6B22C2EDD90099EDA1 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		849EEA1122C34E210096CBEA /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		849EEA1222C34E210096CBEA /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +104,6 @@
 		8429EE3722C2C66B0099EDA1 /* tippy */ = {
 			isa = PBXGroup;
 			children = (
-				8429EE6A22C2EDD90099EDA1 /* SettingsViewController.h */,
-				8429EE6B22C2EDD90099EDA1 /* SettingsViewController.m */,
 				8429EE3822C2C66B0099EDA1 /* AppDelegate.h */,
 				8429EE3922C2C66B0099EDA1 /* AppDelegate.m */,
 				8429EE3B22C2C66B0099EDA1 /* ViewController.h */,
@@ -115,6 +113,8 @@
 				8429EE4322C2C66C0099EDA1 /* LaunchScreen.storyboard */,
 				8429EE4622C2C66C0099EDA1 /* Info.plist */,
 				8429EE4722C2C66C0099EDA1 /* main.m */,
+				849EEA1122C34E210096CBEA /* SettingsViewController.h */,
+				849EEA1222C34E210096CBEA /* SettingsViewController.m */,
 			);
 			path = tippy;
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 				8429EE3D22C2C66B0099EDA1 /* ViewController.m in Sources */,
 				8429EE4822C2C66C0099EDA1 /* main.m in Sources */,
 				8429EE3A22C2C66B0099EDA1 /* AppDelegate.m in Sources */,
-				8429EE6C22C2EDD90099EDA1 /* SettingsViewController.m in Sources */,
+				849EEA1322C34E210096CBEA /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

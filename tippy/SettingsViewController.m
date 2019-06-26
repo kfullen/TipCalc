@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 
 @interface SettingsViewController ()
+@property (weak, nonatomic) IBOutlet UISegmentedControl *defaultTipControl;
 
 @end
 
@@ -18,34 +19,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
-
-- (IBAction)defaultTip15:(UIButton *)sender {
+- (IBAction)changeDefaultTip:(id)sender {
+    NSInteger defaultTipIndex = self.defaultTipControl.selectedSegmentIndex;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setDouble:0.15 forKey:@"default_tip_percentage"];
+    [defaults setInteger:defaultTipIndex forKey:@"default_tip_percentage"];
     [defaults synchronize];
 }
-- (IBAction)defaultTip18:(UIButton *)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setDouble:0.18 forKey:@"default_tip_percentage"];
-    [defaults synchronize];
-}
-- (IBAction)defaultTip20:(UIButton *)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setDouble:0.2 forKey:@"default_tip_percentage"];
-    [defaults synchronize];
-}
-- (IBAction)defaultTip25:(UIButton *)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setDouble:0.25 forKey:@"default_tip_percentage"];
-    [defaults synchronize];
-    
-}
-
-
-
-
-
 
 /*
 #pragma mark - Navigation
